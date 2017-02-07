@@ -4,12 +4,12 @@ DROP TABLE transactions CASCADE;
 CREATE TABLE merchants (
   id SERIAL4 primary key,
   name VARCHAR(255) not null,
-  linkref INT4 UNIQUE
+  linkref INT4
 );
 
 CREATE TABLE transactions (
   id SERIAL4 primary key,
-  merchant_id INT4 references merchants(linkref),
+  merchant VARCHAR(255) not null,
   amount NUMERIC not null,
-  tag VARCHAR(255)
+  tag VARCHAR(255) not null
 );

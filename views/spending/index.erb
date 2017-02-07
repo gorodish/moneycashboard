@@ -1,0 +1,15 @@
+<h1>Spending by Tag</h1>
+
+<% for tag in @tags %>
+
+<ul>
+
+<li><%= tag.tag %><span id="space"><%= tag.amount %></span></li>
+<li></li>
+
+</ul>
+
+<% end %>
+<ul>
+  <li>Total:  <span id="emphasis"><%=@tran.sum[1] %></span></li>
+</ul>

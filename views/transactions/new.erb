@@ -1,0 +1,23 @@
+<h1>Add a new transaction</h1>
+
+<form action="/transactions/create" method="post">
+
+<label>Merchant:
+<input type="text" name="merchant">
+</label>
+
+<label>Amount:
+<input type="text" name="amount">
+</label>
+
+<label>
+  Select a Tag:
+  <select name="tag">
+    <option value="Groceries">Groceries</option>
+    <option value="Electronics">Electronics</option>
+    <option value="Clothing">Clothing</option>
+    <option value="Health">Health</option>
+
+</label>
+<input type="submit" value="Submit">
+</form>

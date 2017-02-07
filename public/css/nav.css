@@ -1,0 +1,28 @@
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: tranparent;
+    font-size:48px;
+}
+
+nav li {
+    float: right;
+}
+
+nav li a {
+    display: block;
+    color: #2e1360;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav a:hover:not(.active) {
+    color: black;
+}
+
+.active {
+    background-color:#2e1360;
+}

@@ -1,0 +1,58 @@
+body {
+  font-family: 'Amiko', sans-serif;
+  font-size: 18px;
+  background: #f0f5f9;
+  color: #52616a;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+header {
+  height: 200px;
+  background-image: url("/images/note4.jpg");
+}
+
+.titleblock {
+  background-image: url("/images/back1.jpg");
+  opacity: 0.7;
+  background-repeat: repeat;
+  font-size: 78px;
+  font-weight: bolder;
+  height: 100px;
+  font-stretch: ultra-expanded;
+  font-family: 'Londrina Shadow', cursive;
+  color: #2e1360;
+}
+
+#content {
+  width: 600px;
+  margin: auto;
+  text-decoration: none;
+}
+
+#content ul {
+    list-style-type: none;
+    margin: 10;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    font-size:18px;
+    color: #2e1360;
+    border: solid 1px #bbc4df;
+    padding: 5px 5px 5px 40px;
+}
+
+#emphasis {
+  color: red;
+  float: right;
+  padding-right: 180px;
+}
+
+#space {
+  float: right;
+  padding-right: 180px;
+}

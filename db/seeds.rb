@@ -1,5 +1,7 @@
 require_relative('../models/transaction.rb')
 require_relative('../models/merchant.rb')
+require_relative('../models/tag_total.rb')
+
 require('pry-byebug')
 
 Transaction.delete_all
@@ -7,45 +9,45 @@ Merchant.delete_all
 
 # MERCHANTS..............................................................
 
-merchant1 = Merchant.new({
-  'name' => 'Tesco',
-  'linkref' => 1
-  })
+# merchant1 = Merchant.new({
+#   'name' => 'Tesco',
+#   'linkref' => 1
+#   })
 
-merchant1.save
+# merchant1.save
 
-merchant2 = Merchant.new({
-  'name' => 'Amazon',
-  'linkref' => 2
-  })
+# merchant2 = Merchant.new({
+#   'name' => 'Amazon',
+#   'linkref' => 2
+#   })
 
-merchant2.save
+# merchant2.save
 
-merchant3 = Merchant.new({
-  'name' => 'John Lewis',
-  'linkref' => 3
-  })
+# merchant3 = Merchant.new({
+#   'name' => 'John Lewis',
+#   'linkref' => 3
+#   })
 
-merchant3.save
+# merchant3.save
 
-merchant4 = Merchant.new({
-  'name' => 'PC World',
-  'linkref' => 4
-  })
+# merchant4 = Merchant.new({
+#   'name' => 'PC World',
+#   'linkref' => 4
+#   })
 
-merchant4.save
+# merchant4.save
 
-merchant5 = Merchant.new({
-  'name' => 'Miss Selfridge',
-  'linkref' => 5
-  })
+# merchant5 = Merchant.new({
+#   'name' => 'Miss Selfridge',
+#   'linkref' => 5
+#   })
 
-merchant5.save
+# merchant5.save
 
 # TRANSACTIONS..............................................................
 
 tran1 = Transaction.new({
-  'merchant_id' => 5,
+  'merchant' => 'Tesco',
   'amount' => 12.99,
   'tag' => 'Clothing'
 })
@@ -53,7 +55,7 @@ tran1 = Transaction.new({
 tran1.save
 
 tran2 = Transaction.new({
-  'merchant_id' => 5,
+  'merchant' => 'Emporio Armani',
   'amount' => 85.00,
   'tag' => 'Clothing'
 })
@@ -61,7 +63,7 @@ tran2 = Transaction.new({
 tran2.save
 
 tran3 = Transaction.new({
-  'merchant_id' => 1,
+  'merchant' => 'Asda',
   'amount' => 121.50,
   'tag' => 'Groceries'
 })
@@ -69,7 +71,7 @@ tran3 = Transaction.new({
 tran3.save
 
 tran4 = Transaction.new({
-  'merchant_id' => 1,
+  'merchant' => 'Lidl',
   'amount' => 11.32,
   'tag' => 'Groceries'
 })
@@ -77,7 +79,7 @@ tran4 = Transaction.new({
 tran4.save
 
 tran5 = Transaction.new({
-  'merchant_id' => 1,
+  'merchant' => 'Tesco',
   'amount' => 18.78,
   'tag' => 'Groceries'
 })
@@ -85,7 +87,7 @@ tran5 = Transaction.new({
 tran5.save
 
 tran6 = Transaction.new({
-  'merchant_id' => 1,
+  'merchant' => 'Lidl',
   'amount' => 75.01,
   'tag' => 'Groceries'
 })
@@ -93,7 +95,7 @@ tran6 = Transaction.new({
 tran6.save
 
 tran6 = Transaction.new({
-  'merchant_id' => 2,
+  'merchant' => 'Amazon',
   'amount' => 375.66,
   'tag' => 'Electronics'
 })

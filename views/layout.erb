@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MoneyCashBoard</title>
+  <link href="https://fonts.googleapis.com/css?family=Amiko|Bahiana|Londrina+Shadow" rel="stylesheet">
+  
+  <link rel="icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="/css/nav.css">
+  <link rel="stylesheet" type="text/css" href="/css/structure.css">
+
+</head>
+<body>
+
+<header></header>
+
+<div class="titleblock">
+<main class="flex flex--row">
+
+  <nav>
+    <ul>
+      <li>
+        <a href="/transactions/new">New transaction</a>
+      </li>
+      <li>
+        <a href="/spending">Spending</a>
+      </li>
+      <li>
+        <a href="/transactions">Transaction List</a>
+      </li>
+    </ul>
+  </nav>
+  
+</div>
+  <section id="content">
+  <%= yield %>
+  </section>
+  </main>
+</body>
+</html>
