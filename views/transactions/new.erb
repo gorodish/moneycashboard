@@ -1,16 +1,16 @@
 <h1>Add a new transaction</h1>
 
 <form action="/transactions/create" method="post">
-
-<label>Merchant:
-<input type="text" name="merchant">
+<fieldset>
+<label class="labelstyle">Merchant:
+<input type="text" name="merchant" class="labelstyle">
+</label>
+<clear />
+<label class="labelstyle">Amount:
+<input type="text" name="amount" class="labelstyle">
 </label>
 
-<label>Amount:
-<input type="text" name="amount">
-</label>
-
-<label>
+<label class="labelstyle">
   Select a Tag:
   <select name="tag">
     <option value="Groceries">Groceries</option>
@@ -19,5 +19,7 @@
     <option value="Health">Health</option>
 
 </label>
-<input type="submit" value="Submit">
+<p>
+<input type="submit" value="Submit" class="labelstyle"></p>
+</fieldset>
 </form>

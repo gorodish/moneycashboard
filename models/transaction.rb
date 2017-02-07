@@ -3,8 +3,7 @@ require_relative('../db/sql_runner')
 
 class Transaction
 
-  attr_reader :id
-  attr_accessor :amount, :tag, :merchant
+  attr_accessor :amount, :tag, :merchant, :id
 
   def initialize(options)
     @id = nil || options['id'].to_i
@@ -50,6 +49,32 @@ class Transaction
     sql = "SELECT sum( amount ) FROM transactions"
     result = SqlRunner.run(sql)
     return result.first
+  end
+
+# Get a transaction by it's id
+  def self.find(id)
+    sql = "SELECT * FROM transactions WHERE id=#{id}"
+    result = SqlRunner.run(sql)
+    transaction = Transaction.new(result.first)
+    return transaction
+  end
+
+# Update a transaction
+
+  def self.update(options)
+    sql = "UPDATE transactions SET
+          merchant='#{options['merchant']}',
+          amount='#{options['amount']}',
+          tag='#{options['tag']}'
+          WHERE id=#{options['id']};"
+    SqlRunner.run(sql)
+  end
+
+# Delete a transaction
+
+  def self.destroy(id)
+    sql = "DELETE FROM transactions WHERE id=#{id}"
+    SqlRunner.run(sql)
   end
 
 end

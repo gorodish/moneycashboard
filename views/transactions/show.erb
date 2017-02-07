@@ -1,0 +1,15 @@
+<h1>Transaction Detail</h1>
+
+<div class="tran_details">
+
+<p>Merchant: <%= @transaction.merchant %></p>
+<p>Amount: <%= @transaction.amount %></p>
+<p>Tag: <%= @transaction.tag %></p>
+
+</div>
+
+<p><a href="/transactions/<%= @transaction.id %>/edit">Edit Transaction</p></a>
+
+<form action="/transactions/<%= @transaction.id %>/delete" method = "post">
+<input type="submit" value="Delete" />
+</form>
