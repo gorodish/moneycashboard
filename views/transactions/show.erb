@@ -3,7 +3,7 @@
 <div class="tran_details">
 
 <p>Merchant: <%= @transaction.merchant %></p>
-<p>Amount: <%= @transaction.amount %></p>
+<p>Amount: <%= sprintf("£%.2f", @transaction.amount) %></p>
 <p>Tag: <%= @transaction.tag %></p>
 
 </div>

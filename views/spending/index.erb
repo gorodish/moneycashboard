@@ -4,12 +4,13 @@
 
 <ul>
 
-<li><%= tag.tag %><span id="space"><%= tag.amount %></span></li>
+<li><%= tag.tag %><span id="space"><%= sprintf("£%.2f", tag.amount) %></span></li>
 <li></li>
 
 </ul>
 
 <% end %>
 <ul>
-  <li>Total:  <span id="emphasis"><%=@tran.sum[1] %></span></li>
+  <li>Total:  <span id="emphasis"><%= sprintf("£%.2f", @tran["sum"]) %></span></li>
 </ul>
+<p><span id="emphasis"><%= @budget %></span></p>

@@ -3,9 +3,9 @@
 <% for tran in @transactions %>
 <ul>
 
-<li><%= tran.merchant %></li>
-<li><%= tran.amount %></li>
-<li><%= tran.tag %></li>
-
+<li><a href="/transactions/<%= tran.id %>"><%= tran.merchant %></li>
+<li><a href="/transactions/<%= tran.id %>"><%= sprintf("£%.2f", tran.amount) %></li>
+<li><a href="/transactions/<%= tran.id %>"><%= tran.tag %></li>
 </ul>
+
 <% end %>

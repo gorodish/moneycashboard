@@ -51,7 +51,7 @@ class Transaction
     return result.first
   end
 
-# Get a transaction by it's id
+# Get a transaction by its id
   def self.find(id)
     sql = "SELECT * FROM transactions WHERE id=#{id}"
     result = SqlRunner.run(sql)
@@ -75,6 +75,15 @@ class Transaction
   def self.destroy(id)
     sql = "DELETE FROM transactions WHERE id=#{id}"
     SqlRunner.run(sql)
+  end
+
+# Find out if you have exceede your budget
+  def self.budget()
+    limit = 500
+    current_total = get_total()["sum"].to_i
+    if current_total > limit
+      return "You have gone over your budget of £#{limit}"
+    end
   end
 
 end
