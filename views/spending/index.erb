@@ -1,16 +1,16 @@
 <h1>Spending by Tag</h1>
 
 <% for tag in @tags %>
-
+<div class'list_unit
 <ul>
 
-<li><%= tag.tag %><span id="space"><%= sprintf("£%.2f", tag.amount) %></span></li>
+<li><%= tag.tag %><span class="space"><%= sprintf("£%.2f", tag.amount) %></span></li>
 <li></li>
 
 </ul>
 
 <% end %>
-<ul>
-  <li>Total:  <span id="emphasis"><%= sprintf("£%.2f", @tran["sum"]) %></span></li>
-</ul>
+  <p>Total:  <span class="space"><%= sprintf("£%.2f", @tran["sum"]) %></span></p>
+
 <p><span id="emphasis"><%= @budget %></span></p>
+</div>

@@ -32,9 +32,21 @@ header {
   width: 600px;
   margin: auto;
   text-decoration: none;
+  list-style-type: none;
 }
 
-#content ul {
+#emphasis {
+  color: red;
+  float: right;
+  padding-right: 180px;
+}
+
+.space {
+  float: right;
+  padding-right: 180px;
+}
+
+.list_unit ul {
     list-style-type: none;
     margin: 10;
     padding: 0;
@@ -44,15 +56,11 @@ header {
     color: #2e1360;
     border: solid 1px #bbc4df;
     padding: 5px 5px 5px 40px;
+    text-decoration: none;
+    width: 400px;
 }
 
-#emphasis {
-  color: red;
+.viewbox {
+  font-size: 0.8em;
   float: right;
-  padding-right: 180px;
-}
-
-#space {
-  float: right;
-  padding-right: 180px;
 }
