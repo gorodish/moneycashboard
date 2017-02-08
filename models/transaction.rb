@@ -3,19 +3,20 @@ require_relative('../db/sql_runner')
 
 class Transaction
 
-  attr_accessor :amount, :tag, :merchant, :id
+  attr_accessor :amount, :tag, :merchant, :id, :tran_date
 
   def initialize(options)
     @id = nil || options['id'].to_i
     @merchant = options['merchant']
     @amount = options['amount'].to_f
     @tag = options['tag']
+    @tran_date = options['tran_date']
   end
 
   # Save new records to the transactions table
 
   def save()
-    sql = "INSERT INTO transactions (merchant, amount, tag) VALUES ('#{@merchant}', #{@amount}, '#{@tag}') RETURNING *;"
+    sql = "INSERT INTO transactions (merchant, amount, tag, tran_date) VALUES ('#{@merchant}', #{@amount}, '#{@tag}', '#{@tran_date}') RETURNING *;"
     data = SqlRunner.run(sql)
     @id = data.first()['id'].to_i
   end
@@ -65,7 +66,8 @@ class Transaction
     sql = "UPDATE transactions SET
           merchant='#{options['merchant']}',
           amount='#{options['amount']}',
-          tag='#{options['tag']}'
+          tag='#{options['tag']}',
+          tran_date='#{options['tran_date']}',
           WHERE id=#{options['id']};"
     SqlRunner.run(sql)
   end
@@ -73,7 +75,7 @@ class Transaction
 # Delete a transaction
 
   def self.destroy(id)
-    sql = "DELETE FROM transactions WHERE id=#{id}"
+    sql = "DELETE FROM transactions WHERE id=#{id};"
     SqlRunner.run(sql)
   end
 

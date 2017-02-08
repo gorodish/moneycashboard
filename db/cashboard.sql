@@ -11,5 +11,6 @@ CREATE TABLE transactions (
   id SERIAL4 primary key,
   merchant VARCHAR(255) not null,
   amount NUMERIC not null,
-  tag VARCHAR(255) not null
+  tag VARCHAR(255) not null,
+  tran_date date
 );

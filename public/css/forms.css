@@ -12,7 +12,10 @@
     width:100px; 
     padding:5px 10px;
     margin-top: 3px;
+}
 
+.labelstyle option {
+    float: right;
 }
 
 #sub {

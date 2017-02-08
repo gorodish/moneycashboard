@@ -11,7 +11,12 @@
    <input type="text" name="amount" value="<%= @transaction.amount %>">
  </label>
 
- <label>Select a transaction:
+ <label>
+ Date:
+   <input type="text" name="tran_date" value="<%= @transaction.tran_date %>">
+ </label>
+
+ <label>Select a tag:
    <select name="tag">
      <option value="Groceries" <%= "selected" if @transaction.tag == "Groceries" %>>Groceries</option>
      <option value="Electronics" <%= "selected" if @transaction.tag == "Electronics" %>>Electronics</option>
