@@ -31,7 +31,7 @@ class Transaction
 # View all records from the transactions table
 
   def self.all()
-    sql = "SELECT * FROM transactions"
+    sql = "SELECT * FROM transactions ORDER BY tran_date"
     result = Transaction.get_many(sql)
     return result
   end
